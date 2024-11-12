@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -433,6 +434,8 @@ public class HelloController {
     }
 
     public static double [] training(){
+        bias = 0;
+
         String fileName = "xo-data-for-bardi.txt"; // Replace with your file name
         List<int[]> data = new ArrayList<>();
 
@@ -454,6 +457,9 @@ public class HelloController {
         int[][] list_of_inputs_and_targets = data.toArray(new int[data.size()][]);
         int epoch_length = list_of_inputs_and_targets.length;
          weight= new double[list_of_inputs_and_targets[0].length -1];
+         for(int i = 0 ; i< weight.length; i++){
+             weight[i] = 0;
+         }
         int [] data_for_current_epoch = new int[list_of_inputs_and_targets[0].length];
         while(true){
             for(int epoch_index =0 ; epoch_index < epoch_length ; epoch_index++){
@@ -493,6 +499,7 @@ public class HelloController {
                     }
                 }
             }
+        System.out.println(" ");
 
         double net_input = 0;
         for( i = 0 ; i < list_of_inputs.length ; i++){
@@ -514,4 +521,228 @@ public class HelloController {
     }
 
 
+    public void btn1Entered(MouseEvent mouseEvent) {
+        btn1.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn1Exited(MouseEvent mouseEvent) {
+        btn1.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn2Entered(MouseEvent mouseEvent) {
+        btn2.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn2Exited(MouseEvent mouseEvent) {
+        btn2.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn3Entered(MouseEvent mouseEvent) {
+        btn3.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn3Exited(MouseEvent mouseEvent) {
+        btn3.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn4Entered(MouseEvent mouseEvent) {
+        btn4.setStyle("--fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn5Entered(MouseEvent mouseEvent) {
+        btn5.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn5Exited(MouseEvent mouseEvent){
+        btn5.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+
+    }
+
+    public void btn4Exited(MouseEvent mouseEvent) {
+        btn4.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn6Entered(MouseEvent mouseEvent) {
+        btn6.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn6Exited(MouseEvent mouseEvent) {
+        btn6.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn7Exited(MouseEvent mouseEvent) {
+        btn7.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn7Entered(MouseEvent mouseEvent) {
+        btn7.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn8Entered(MouseEvent mouseEvent) {
+        btn8.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn8Exited(MouseEvent mouseEvent) {
+        btn8.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn9Entered(MouseEvent mouseEvent) {
+        btn9.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn9Exited(MouseEvent mouseEvent) {
+        btn9.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn10Entered(MouseEvent mouseEvent) {
+        btn10.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn10Exited(MouseEvent mouseEvent) {
+        btn10.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn11Entered(MouseEvent mouseEvent) {
+        btn11.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn11Exited(MouseEvent mouseEvent) {
+        btn11.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn12Entered(MouseEvent mouseEvent) {
+        btn12.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn12Exited(MouseEvent mouseEvent) {
+        btn12.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn13Entered(MouseEvent mouseEvent) {
+        btn13.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn13Exited(MouseEvent mouseEvent) {
+        btn13.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn14Exited(MouseEvent mouseEvent) {
+        btn14.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn14Entered(MouseEvent mouseEvent) {
+        btn14.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn15Entered(MouseEvent mouseEvent) {
+        btn15.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn15Exited(MouseEvent mouseEvent) {
+        btn15.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn16Entered(MouseEvent mouseEvent) {
+        btn16.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn16Exited(MouseEvent mouseEvent) {
+        btn16.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn17Entered(MouseEvent mouseEvent) {
+        btn17.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn17Exited(MouseEvent mouseEvent) {
+        btn17.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn18Entered(MouseEvent mouseEvent) {
+        btn18.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn18Exited(MouseEvent mouseEvent) {
+        btn18.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn19Entered(MouseEvent mouseEvent) {
+        btn19.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn19Exited(MouseEvent mouseEvent) {
+        btn19.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn20Entered(MouseEvent mouseEvent) {
+        btn20.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn20Exited(MouseEvent mouseEvent) {
+        btn20.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn21Entered(MouseEvent mouseEvent) {
+        btn21.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn21Exited(MouseEvent mouseEvent) {
+        btn21.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn22Entered(MouseEvent mouseEvent) {
+        btn22.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn22Exited(MouseEvent mouseEvent) {
+        btn22.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn23Entered(MouseEvent mouseEvent) {
+        btn23.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn23Exited(MouseEvent mouseEvent) {
+        btn23.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn24Entered(MouseEvent mouseEvent) {
+        btn24.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn24Exited(MouseEvent mouseEvent) {
+        btn24.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn25Entered(MouseEvent mouseEvent) {
+        btn25.setStyle("-fx-background-color: #c8cdcf; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btn25Exited(MouseEvent mouseEvent) {
+        btn25.setStyle("-fx-background-color: #D4F6FF; -fx-pref-width: 100; -fx-pref-height:100;");
+    }
+
+    public void btnClearEntered(MouseEvent mouseEvent) {
+        btnClear.setStyle("-fx-background-color: #ffb7a1; -fx-pref-width: 100; -fx-pref-height:100; -fx-font-weight: bold;");
+    }
+
+    public void btnClearExited(MouseEvent mouseEvent) {
+        btnClear.setStyle("-fx-background-color: #F87A53; -fx-pref-width: 100; -fx-pref-height:100; -fx-font-weight: bold;");
+    }
+
+    public void btnGoEntered(MouseEvent mouseEvent) {
+        btnGo.setStyle("-fx-background-color: #daf7dc; -fx-pref-width: 100; -fx-pref-height:100; -fx-font-weight: bold;");
+    }
+
+    public void btnGoExited(MouseEvent mouseEvent) {
+        btnGo.setStyle("-fx-background-color: #C2FFC7; -fx-pref-width: 100; -fx-pref-height:100; -fx-font-weight: bold;");
+    }
+
+    public void btnTrainingEntered(MouseEvent mouseEvent) {
+        btnTraining.setStyle("-fx-background-color: #fffaed; -fx-pref-width: 100; -fx-pref-height:100; -fx-font-weight: bold;");
+    }
+
+    public void btnTrainingExited(MouseEvent mouseEvent) {
+        btnTraining.setStyle("-fx-background-color: #F5E8C7; -fx-pref-width: 100; -fx-pref-height:100; -fx-font-weight: bold;" );
+    }
 }
